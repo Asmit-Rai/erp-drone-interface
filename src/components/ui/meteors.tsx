@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import { cn } from "../../../../lib/utils";
+import { cn } from "@/lib/utils";
 
-export const Meteors = ({
+const  Meteors = ({
   number,
   className,
 }: {
@@ -43,3 +43,5 @@ export const Meteors = ({
     </motion.div>
   );
 };
+
+export default Meteors

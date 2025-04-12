@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
+
+
+:root {
+  --sz: 4vmin;
+  --on: #2eddf3;
+  --of: #68838d;
+  --tr: all 0.25s ease 0s;
+}
+ 
 
 @custom-variant dark (&:is(.dark *));
 

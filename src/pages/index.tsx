@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { DroneStatusCard } from "./components/DroneStatusCard";
-import DroneModel from "./components/DroneModel";
-import { DroneStatusCardMob } from "./components/DroneStatusCardMob";
+import DroneModelViewer from "@/components/ui/DroneModel";
+import DroneStatusCard from "@/components/ui/DroneStatusCard";
+import DroneStatusCardMob from "@/components/ui/DroneStatusCardMob";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -48,7 +48,7 @@ export default function Home() {
       </div>
 
       <div className="w-full h-screen z-0">
-        <DroneModel />
+        <DroneModelViewer />
       </div>
 
       <Image

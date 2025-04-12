@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "@/styles/toggle.css";
 
 const ToggleSwitch = () => {
   const [isChecked, setIsChecked] = useState(false);

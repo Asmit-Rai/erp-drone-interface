@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { DroneStatusCard } from "../components/DroneStatusCard";
-import Camera from "../components/Camera";
-import "@/styles/toggle.css";
-import ToggleSwitch from "../components/ToggleSwitch";
+import Camera from "@/components/Camera";
+import ToggleSwitch from "@/components/ui/ToggleSwitch";
+import DroneStatusCard from "@/components/ui/DroneStatusCard";
 
 const Control = () => {
 

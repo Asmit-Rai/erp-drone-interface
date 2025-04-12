@@ -2,8 +2,7 @@
 
 import React from "react";
 import { IconWifi, IconBattery3, IconCircleCheck } from "@tabler/icons-react";
-import { BackgroundGradient } from "./ui/background-gradient";
-import ColoredLine from "./ui/ColoredLine";
+import { BackgroundGradient } from "./background-gradient";
 
 type DroneProps = {
   drone: {
@@ -18,7 +17,7 @@ type DroneProps = {
   };
 };
 
-export function DroneStatusCard({ drone }: DroneProps) {
+function DroneStatusCardMob({ drone }: DroneProps) {
   const statusColor = {
     Active: "text-green-500",
     Idle: "text-yellow-400",
@@ -38,11 +37,9 @@ export function DroneStatusCard({ drone }: DroneProps) {
         <h2 className="text-2xl font-semibold text-white mt-4">
           {drone.model}
         </h2>
-
         <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
           ID: {drone.id}
         </p>
-        <ColoredLine/> 
 
         <div className="grid grid-cols-3 gap-4 text-sm">
           <div className="flex flex-col items-center text-center">
@@ -67,13 +64,7 @@ export function DroneStatusCard({ drone }: DroneProps) {
             </span>
           </div>
 
-         
-          <ColoredLine/>
-          <ColoredLine/>
-          <ColoredLine/>
-
-    
-          <div className="col-span-3 text-start mt-2">
+          <div className="col-span-3 text-center mt-2">
             <p>
               Last Connected:{" "}
               <span className="text-neutral-500">{drone.lastConnected}</span>
@@ -83,11 +74,10 @@ export function DroneStatusCard({ drone }: DroneProps) {
               <span className="text-neutral-500">{drone.connectionType}</span>
             </p>
           </div>
-
         </div>
-        
-
       </BackgroundGradient>
     </div>
   );
 }
+
+export default DroneStatusCardMob
