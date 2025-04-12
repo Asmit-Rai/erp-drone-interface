@@ -1,12 +1,10 @@
 import Image from "next/image";
 import { DroneStatusCard } from "../components/DroneStatusCard";
 import Camera from "../components/Camera";
-import { useState } from "react";
 import "@/styles/toggle.css";
 import ToggleSwitch from "../components/ToggleSwitch";
 
 const Control = () => {
-  const [isChecked, setIsChecked] = useState(false);
 
 
   const droneInfo = {
@@ -17,7 +15,7 @@ const Control = () => {
     lastConnected: "Today at 14:45",
     connectionType: "Wi-Fi",
     signalStrength: "Excellent" as const,
-    operator: "John Doe",
+    operator: "Xyz",
   };
 
   return (

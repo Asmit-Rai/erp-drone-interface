@@ -1,7 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
 
 const Connect = () => {
+  const router = useRouter();
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault(); 
+    router.push("/");  
+  };
+
+
   return (
     <div className="min-h-screen flex items-center justify-center relative">
       <Image
@@ -51,8 +60,10 @@ const Connect = () => {
             <button 
               type="submit"
               className="w-full bg-[#FF833A] text-white py-3 rounded-lg font-bold"
+              onClick={handleClick}
             >
               Connect
+
             </button>
             </div>
             
