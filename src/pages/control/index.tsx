@@ -16,7 +16,7 @@ const Control = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col px-2 sm:px-4 overflow-hidden"> 
+    <div className="w-screen h-screen max-h-screen flex flex-col px-2 sm:px-4 overflow-hidden"> 
       <div className="relative">
         <Image
           src="/line-circle-icon.png"
@@ -26,7 +26,7 @@ const Control = () => {
           className="absolute top-0 right-0"
         />
       </div>
-      <div className="flex flex-col justify-evenly w-full h-full overflow-hidden "> 
+      <div className="flex flex-col justify-evenly w-full h-full overflow-hidden"> 
         <div className="flex flex-col items-center justify-evenly lg:flex-row gap-4 md:gap-8 w-full ">
           <div className="w-[95%] sm:w-full lg:w-1/5"> 
             <DroneStatusCard drone={droneInfo} />

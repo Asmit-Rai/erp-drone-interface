@@ -59,7 +59,7 @@ export default function Home() {
         className="absolute bottom-10 z-1 invisible sm:visible"
       />
 
-      <div className="absolute right-0 bottom-0 w-full lg:w-60 h-20 bg-[#AA6034] rounded-t-3xl text-center flex items-center justify-center z-50">
+      <div className="absolute right-0 bottom-10 w-full lg:w-60 h-20 bg-[#AA6034] rounded-t-3xl text-center flex items-center justify-center z-50">
         <button 
           type="button" 
           className="w-full h-full text-4xl text-white font-bold cursor-pointer" 
