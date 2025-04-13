@@ -39,15 +39,15 @@ export default function Home() {
         className="absolute top-0 right-0"
       />
       
-      <div className="absolute left-4 top-1/2 transform -translate-y-1/2 w-[22vw] sm:max-w-[15rem] sm:max-h-[16rem] h-[60vh] z-10 invisible sm:visible">
+      <div className="absolute left-4 top-1/2 transform -translate-y-1/2 w-[22vw] sm:max-w-[15rem] sm:max-h-[16rem] h-[60vh] z-5 invisible sm:visible">
         <DroneStatusCard drone={droneInfo} />
       </div>
       
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-10 visible sm:invisible">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-6 visible sm:invisible">
         <DroneStatusCardMob drone={droneInfo} />
       </div>
 
-      <div className="w-full h-screen z-0">
+      <div className="w-full h-screen z-10">
         <DroneModelViewer />
       </div>
 
