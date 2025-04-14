@@ -1,0 +1,75 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Filter for the cyan glow effect -->
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="cyanGlowIntense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradients for dark metallic steps/structure -->
+    <linearGradient id="stepSideGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#18181a; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0c; stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="stepTopGradient" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#2f2f33; stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#252528; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1d; stop-opacity:1" />
+    </radialGradient>
+
+    <linearGradient id="pillarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#151518; stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#28282c; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#151518; stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="centerDarkGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#050506; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#101012; stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <path d="M 20 280 A 180 60 0 0 0 380 280 L 380 295 A 180 60 0 0 1 20 295 Z" fill="url(#stepSideGradient)" />
+  <ellipse cx="200" cy="280" rx="180" ry="60" fill="url(#stepTopGradient)" />
+  <!-- Step 1 -->
+  <path d="M 35 265 A 165 55 0 0 0 365 265 L 365 280 A 165 55 0 0 1 35 280 Z" fill="url(#stepSideGradient)" />
+  <ellipse cx="200" cy="265" rx="165" ry="55" fill="url(#stepTopGradient)" />
+  <!-- Step 2 (Pillar Base) -->
+  <path d="M 50 250 A 150 50 0 0 0 350 250 L 350 265 A 150 50 0 0 1 50 265 Z" fill="url(#stepSideGradient)" />
+  <ellipse cx="200" cy="250" rx="150" ry="50" fill="url(#stepTopGradient)" />
+  <!-- Step 3 -->
+  <path d="M 65 235 A 135 45 0 0 0 335 235 L 335 250 A 135 45 0 0 1 65 250 Z" fill="url(#stepSideGradient)" />
+  <ellipse cx="200" cy="235" rx="135" ry="45" fill="url(#stepTopGradient)" />
+  <!-- Step 4 (Top-most) -->
+  <path d="M 80 220 A 120 40 0 0 0 320 220 L 320 235 A 120 40 0 0 1 80 235 Z" fill="url(#stepSideGradient)" />
+  <ellipse cx="200" cy="220" rx="120" ry="40" fill="url(#stepTopGradient)" />
+
+  <!-- Central Dark Area -->
+  <!-- cy=205, rx=95, ry=32 (Derived from top step - offsets) -->
+  <ellipse cx="200" cy="205" rx="95" ry="32" fill="url(#centerDarkGradient)" />
+
+  <!-- Ring Structure (Groove/Mask) -->
+  <!-- Outer: cx=200, cy=205, rx=105, ry=35 -->
+  <!-- Inner: cx=200, cy=205, rx=98, ry=33 -->
+  <ellipse cx="200" cy="205" rx="105" ry="35" fill="#1a1a1d" />
+  <ellipse cx="200" cy="205" rx="98" ry="33" fill="url(#centerDarkGradient)" />
+
+  <!-- Glowing Ring Elements (Centered at cy=205) -->
+  <!-- Centerline: rx=101.5, ry=34 -->
+  <!-- Stroke width: Base=6, Main=2, Bright=1 -->
+  <ellipse cx="200" cy="205" rx="101.5" ry="34" fill="none" stroke="#FF833A" stroke-width="6" opacity="0.5" filter="url(#cyanGlow)" />
+  <ellipse cx="200" cy="205" rx="101.5" ry="34" fill="none" stroke="#FF833B" stroke-width="3" opacity="0.9" filter="url(#cyanGlowIntense)" />
+  <ellipse cx="200" cy="205" rx="101.5" ry="34" fill="none" stroke="#FF833C" stroke-width="1" opacity="1" />
+
+</svg>
