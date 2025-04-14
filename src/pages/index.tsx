@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import PopUp from "@/components/PopUp";
 
-
 const Home = () => {
   const [showPopup, setshowPopup] = useState(false);
 
@@ -13,11 +12,9 @@ const Home = () => {
     setshowPopup(true);
   };
 
-  const handleClosePopup =()=>
-  {
-    setshowPopup(false)
-  }
-
+  const handleClosePopup = () => {
+    setshowPopup(false);
+  };
 
   const router = useRouter();
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -37,24 +34,18 @@ const Home = () => {
       />
 
       <Image
-        src="/circle-mobile-icon.png"
-        width={150}
-        height={150}
-        alt="Circle Mobile Icon"
-        className="absolute bottom-0 left-0 block sm:hidden"
-      />
-      <Image
-        src="/line-circle-icon.png"
+        src="/right-top-corner.svg"
         width={150}
         height={150}
         alt="Line Circle Icon"
-        className="absolute top-0 right-0"
+        className="absolute top-0 right-0 "
       />
+
       <Image
-        src="/tree-icon.png"
+        src="/right-bottom-corner.svg"
         width={150}
         height={150}
-        alt="Tree Icon"
+        alt="Line Circle Icon"
         className="absolute bottom-0 right-0"
       />
 

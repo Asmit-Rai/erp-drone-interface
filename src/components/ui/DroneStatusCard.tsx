@@ -3,7 +3,6 @@
 import React from "react";
 import { IconWifi, IconBattery3, IconCircleCheck } from "@tabler/icons-react";
 import { BackgroundGradient } from "./background-gradient";
-import ColoredLine from "../ColoredLine";
 
 type DroneProps = {
   drone: {
@@ -34,7 +33,7 @@ export default function DroneStatusCard({ drone }: DroneProps) {
 
   return (
     <div>
-      <BackgroundGradient className="relative w-full min-h-[250px] flex flex-col justify-evenly items-center rounded-[22px] bg-[#2D2F31] px-2 py-3">
+      <BackgroundGradient className="relative w-full min-h-[30vh] flex flex-col justify-evenly items-center rounded-[22px] bg-[#252729]">
         <h2 className="text-2xl font-semibold text-white mt-4">
           {drone.model}
         </h2>
@@ -42,7 +41,6 @@ export default function DroneStatusCard({ drone }: DroneProps) {
         <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
           ID: {drone.id}
         </p>
-        <ColoredLine/> 
 
         <div className="grid grid-cols-3 gap-4 text-sm">
           <div className="flex flex-col items-center text-center">
@@ -67,12 +65,6 @@ export default function DroneStatusCard({ drone }: DroneProps) {
             </span>
           </div>
 
-         
-          <ColoredLine/>
-          <ColoredLine/>
-          <ColoredLine/>
-
-    
           <div className="col-span-3 text-start mt-2">
             <p>
               Last Connected:{" "}

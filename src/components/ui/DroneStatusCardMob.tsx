@@ -33,11 +33,11 @@ function DroneStatusCardMob({ drone }: DroneProps) {
 
   return (
     <div>
-      <BackgroundGradient className="relative w-full min-h-[250px] flex flex-col justify-evenly items-center rounded-[22px] bg-[#2D2F31] px-2 py-3">
-        <h2 className="text-2xl font-semibold text-white mt-4">
+      <BackgroundGradient className="relative w-full min-h-[30vh] flex flex-col justify-evenly items-center rounded-[22px] bg-[#252729]">
+        <h2 className="text-4xl font-semibold text-white mt-4 ">
           {drone.model}
         </h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+        <p className="text-sm text-neutral-500 dark:text-neutral-100 mb-3">
           ID: {drone.id}
         </p>
 
@@ -64,10 +64,10 @@ function DroneStatusCardMob({ drone }: DroneProps) {
             </span>
           </div>
 
-          <div className="col-span-3 text-center mt-2">
+          <div className="col-span-3 text-start mt-2">
             <p>
               Last Connected:{" "}
-              <span className="text-neutral-500">{drone.lastConnected}</span>
+              <span className="text-neutral-400">{drone.lastConnected}</span>
             </p>
             <p>
               Connection Type:{" "}

@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 export default function Dashboard() {
   const router = useRouter();
-  
+
   const handleClick = () => {
     console.log("Button clicked");
     const droneId = 1;
@@ -26,43 +26,51 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="relative w-full h-screen bg-[#1a1a1a] flex flex-col items-center justify-center overflow-hidden">
+    <div className="w-screen h-screen bg-[#1a1a1a] flex flex-col items-center justify-center">
       <p className="absolute top-0 h-20 animate-text bg-gradient-to-r from-[#ffc680] via-[#E55C00] to-[#b36200] bg-clip-text text-transparent text-6xl font-black">
         Ready to Fly?
       </p>
 
       <Image
-        src="/line-circle-icon.png"
+        src="/left-top-corner.svg"
+        alt="line circle icon"
+        width={200}
+        height={200}
+        className="absolute top-0 left-0 hidden sm:block"
+      />
+
+      <Image
+        src="/right-top-corner.svg"
         alt="line circle icon"
         width={200}
         height={200}
         className="absolute top-0 right-0"
       />
-      
-      <div className="absolute left-4 top-1/2 transform -translate-y-1/2 w-[22vw] sm:max-w-[15rem] sm:max-h-[16rem] h-[60vh] z-5 invisible sm:visible">
+
+      <div className="absolute left-4 w-[30vw] sm:max-w-[20rem] z-5 invisible sm:visible">
         <DroneStatusCard drone={droneInfo} />
       </div>
-      
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-6 visible sm:invisible">
+
+      <div className="absolute top-0 w-full z-6 visible sm:invisible">
         <DroneStatusCardMob drone={droneInfo} />
       </div>
 
-      <div className="w-full h-screen z-10">
+      <div className="w-screen h-[50%] lg:h-[100vh] z-10 ">
         <DroneModelViewer />
       </div>
 
       <Image
-        src="/drone-plate.png"
+        src="/launch-pad.svg"
         width={350}
         height={20}
         alt="plate"
-        className="absolute bottom-10 z-1 invisible sm:visible"
+        className="absolute bottom-0 z-1 invisible sm:visible"
       />
 
-      <div className="absolute right-0 bottom-10 w-full lg:w-60 h-20 bg-[#AA6034] rounded-t-3xl text-center flex items-center justify-center z-50">
-        <button 
-          type="button" 
-          className="w-full h-full text-4xl text-white font-bold cursor-pointer" 
+      <div className="absolute right-0 bottom-0 w-full lg:w-60 h-20 bg-[#FF833A] rounded-t-3xl text-center flex items-center justify-center z-50">
+        <button
+          type="button"
+          className="w-full h-full text-4xl text-white font-bold cursor-pointer"
           onClick={handleClick}
         >
           Start
