@@ -3,16 +3,26 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
+import { useState } from "react";
+import PopUp from "@/components/PopUp";
 const Connect = () => {
+  const [showPopup, setshowPopup] = useState(false);
+
+  const handlePopUp = () => {
+    setshowPopup(true);
+  };
+
+  const handleClosePopup =()=>
+  {
+    setshowPopup(false)
+  }
+
+
   const router = useRouter();
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     router.push("/");
   };
-
-
-  
 
   return (
     <div className="h-screen flex items-center justify-center">
@@ -57,7 +67,7 @@ const Connect = () => {
           >
             <div>
               <label
-                className="block text-left text-gray-300 font-bold text-lg"
+                className="block text-left text-white font-bold text-lg"
                 htmlFor="WifiSSID"
               >
                 WifiSSID
@@ -70,7 +80,7 @@ const Connect = () => {
             </div>
             <div>
               <label
-                className="block text-left text-gray-300 font-semibold text-lg"
+                className="block text-left text-white font-semibold text-lg"
                 htmlFor="Password"
               >
                 Enter Password
@@ -90,15 +100,16 @@ const Connect = () => {
                 Connect
               </button>
               <button
-                type="submit"
+                type="button"
                 className="w-full h-[5vh] bg-[#FF833A] text-white rounded-lg font-bold"
-                onClick={handleClick}
+                onClick={handlePopUp}
               >
-                Connect through Wifi
+                Wi-Fi Setup Guide
               </button>
             </div>
           </form>
         </div>
+        {showPopup && <PopUp onClose={handleClosePopup} />}
       </div>
     </div>
   );
