@@ -7,10 +7,6 @@
   justify-content: center;
 }
 
-input {
-  display: none;
-}
-
 label[for=btn] {
   position: absolute;
   width: calc(var(--sz) * 4);
