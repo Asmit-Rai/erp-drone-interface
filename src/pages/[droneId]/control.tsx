@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Camera from "@/components/Camera";
 import ToggleSwitch from "@/components/ui/ToggleSwitch";
